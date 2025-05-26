@@ -1,22 +1,13 @@
 import sys
 from ppadb.client import Client as AdbClient
 
-
-
 # Connect to ADB
 client = AdbClient(host="127.0.0.1", port=5037)
 device = client.devices()[0]
 
-# Read command-line argument
-#if len(sys.argv) < 2:
-    #print("No command provided.")
-    #sys.exit(1)
+#Mapping commands to one or two-letter inputs decreases input delay. If you want to decrease it further, then lower the delay between keys in VoiceAttack
 
-#command = sys.argv[1]
-#command = input()
-# Map commands to coordinates
-
-#left, right, up, down, uleft, urignt, dleft, dright, shoot, super
+#left, right, up, down, uleft, urignt, dleft, dright, shoot(attack), super, aimed attack (for tutorial)
 tap_map = {
     'l': (358,804, 300, 804),
     'r': (358,804, 408, 804),
